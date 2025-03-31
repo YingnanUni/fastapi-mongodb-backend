@@ -1,40 +1,65 @@
-📦 FastAPI MongoDB Project
+# 🚀 FastAPI MongoDB Project
 
-A simple FastAPI application that connects to MongoDB, provides basic API endpoints, and includes tests.
+A minimal FastAPI application connected to MongoDB, with basic CRUD APIs and test coverage.
 
-Project Structure.
-├── __pycache__/           # Compiled Python files
-├── venv/                  # Python virtual environment
-├── .gitignore             # Git ignored files
-├── db.py                  # MongoDB connection setup
-├── main.py                # FastAPI app and routes
-├── requirements.txt       # Project dependencies
-├── test_api.py            # Unit tests for API
+## 📁 Project Structure
 
-⚙️ Requirements
-Install dependencies from requirements.txt:
+```
+.
+├── __pycache__/           # Compiled Python bytecode
+├── venv/                  # Virtual environment (excluded by .gitignore)
+├── .gitignore             # Git ignore file
+├── db.py                  # MongoDB connection configuration
+├── main.py                # FastAPI routes and app setup
+├── requirements.txt       # Python dependencies
+├── test_api.py            # Basic API tests using requests
+```
+
+## 🧰 Requirements
+
+Install dependencies using:
+
+```bash
 pip install -r requirements.txt
-Dependencies include:
-fastapi – Web framework
-uvicorn – ASGI server to run FastAPI
-pymongo – MongoDB driver for Python
+```
 
-🚀 Running the App
-Run the FastAPI server with:
+### Dependencies:
+
+- `fastapi` – Web framework for building APIs
+- `uvicorn` – ASGI server for FastAPI
+- `pymongo` – MongoDB Python driver
+
+## ⚙️ How to Run
+
+Start the development server using:
+
+```bash
 uvicorn main:app --reload
-Open your browser and go to:
-http://127.0.0.1:8000/docs – Swagger UI for interactive API testing
+```
 
-🧠 MongoDB Configuration
-The MongoDB connection is configured in db.py.
-Update your MongoDB URI and database name inside this file as needed.
+Visit the interactive docs at:  
+👉 http://127.0.0.1:8000/docs
 
-🧪 Running Tests
-To run the test cases:
+## 🧠 MongoDB Setup
+
+- Edit `db.py` to configure your MongoDB URI and database name.
+- Ensure MongoDB is running locally or provide a valid cloud connection string.
+
+## ✅ Running Tests
+
+Tests are written in `test_api.py` using the `requests` library.
+
+Run tests with:
+
+```bash
 python test_api.py
-Tests are written using Python's requests library and verify core endpoints.
+```
 
-📄 .gitignore
-Make sure your virtual environment and compiled files are not tracked by Git:
+## 📄 .gitignore
+
+This project excludes the following from version control:
+
+```
 __pycache__/
 venv/
+```
